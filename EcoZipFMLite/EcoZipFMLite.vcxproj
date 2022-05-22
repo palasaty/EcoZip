@@ -27,21 +27,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
@@ -49,7 +49,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
@@ -85,7 +85,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\..\7ze-src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)\7ze-src;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -196,20 +196,20 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\AltStreamsFolder.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FilePlugins.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\EnumFormatEtc.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FormatUtils.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FSDrives.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FSFolder.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\HelpUtils.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\IFolder.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\LangUtils.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\PropertyName.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\RegistryPlugins.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\StringUtils.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\SysIconUtils.h" />
-    <ClInclude Include="..\..\7ze-src\CPP\7zip\UI\FileManager\TextPairs.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\AltStreamsFolder.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\FilePlugins.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\EnumFormatEtc.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\FormatUtils.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\FSDrives.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\FSFolder.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\HelpUtils.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\IFolder.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\LangUtils.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\PropertyName.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\RegistryPlugins.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\StringUtils.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\SysIconUtils.h" />
+    <ClInclude Include="..\7ze-src\CPP\7zip\UI\FileManager\TextPairs.h" />
     <ClInclude Include="..\EcoZipFM\EcoZipFM.h" />
     <ClInclude Include="..\EcoZipFM\EcoZipFMDlg.h" />
     <ClInclude Include="..\EcoZipFM\BCMenu.h" />
@@ -270,124 +270,124 @@
     <ClInclude Include="..\EcoZipFM\WICImagingFactory.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\CreateCoder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\CWrappers.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\FilePathAutoRename.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\FileStreams.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\FilterCoder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\InBuffer.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\InOutTempBuffer.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\LimitedStreams.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\LockedStream.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\MemBlocks.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\MethodId.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\MethodProps.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\OffsetStream.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\OutBuffer.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\OutMemStream.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\ProgressMt.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\ProgressUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\PropId.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\StreamBinder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\StreamObjects.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\StreamUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\UniqBlocks.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Common\VirtThread.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Compress\CopyCoder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\Compress\CopyRegister.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\Agent.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\AgentOut.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\AgentProxy.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolderOpen.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolderOut.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Agent\UpdateCallbackAgent.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ArchiveCommandLine.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ArchiveExtractCallback.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ArchiveName.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ArchiveOpenCallback.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\DefaultName.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\EnumDirItems.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\Extract.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ExtractingFilePath.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\HashCalc.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\OpenArchive.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\PropIDUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\SetProperties.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\SortUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\TempFiles.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\Update.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\UpdateAction.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\UpdateCallback.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\UpdatePair.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\UpdateProduce.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\WorkDir.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\Common\ZipRegistry.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\ExplorerE\ContextMenu.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\ExplorerE\MyMessages.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\ExplorerE\RegistryContextMenu.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\AltStreamsFolder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FilePlugins.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\ClassDefs.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\EnumFormatEtc.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FormatUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FSDrives.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FSFolder.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\FSFolderCopy.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\HelpUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\LangUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\PropertyName.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\RegistryPlugins.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\StringUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\SysIconUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\TextPairs.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\7zip\UI\FileManager\RegistryUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\CommandLineParser.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\CRC.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\CrcReg.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\DynLimBuf.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\IntToString.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\Lang.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\ListFileUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\MyMap.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\MyString.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\MyXml.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\Random.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\Sha1Reg.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\StringConvert.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\StringToInt.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\UTFConvert.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Common\Wildcard.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\Clipboard.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\CommonDialog.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\DLL.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\ErrorMsg.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileDir.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileFind.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileIO.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileLink.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileName.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\FileSystem.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\MemoryGlobal.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\MemoryLock.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\Menu.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\Net.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\ProcessUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\PropVariant.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\PropVariantConv.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\PropVariantUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\Registry.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\ResourceString.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\SecurityUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\Shell.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\System.cpp" />
-    <ClCompile Include="..\..\7ze-src\CPP\Windows\TimeUtils.cpp" />
-    <ClCompile Include="..\..\7ze-src\C\7zCrc.c" />
-    <ClCompile Include="..\..\7ze-src\C\Alloc.c" />
-    <ClCompile Include="..\..\7ze-src\C\CpuArch.c" />
-    <ClCompile Include="..\..\7ze-src\C\Sha1.c" />
-    <ClCompile Include="..\..\7ze-src\C\Sort.c" />
-    <ClCompile Include="..\..\7ze-src\C\Threads.c" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\CreateCoder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\CWrappers.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\FilePathAutoRename.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\FileStreams.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\FilterCoder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\InBuffer.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\InOutTempBuffer.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\LimitedStreams.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\LockedStream.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\MemBlocks.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\MethodId.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\MethodProps.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\OffsetStream.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\OutBuffer.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\OutMemStream.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\ProgressMt.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\ProgressUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\PropId.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\StreamBinder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\StreamObjects.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\StreamUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\UniqBlocks.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Common\VirtThread.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Compress\CopyCoder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Compress\CopyRegister.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\Agent.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\AgentOut.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\AgentProxy.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolderOpen.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\ArchiveFolderOut.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Agent\UpdateCallbackAgent.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ArchiveCommandLine.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ArchiveExtractCallback.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ArchiveName.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ArchiveOpenCallback.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\DefaultName.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\EnumDirItems.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\Extract.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ExtractingFilePath.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\HashCalc.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\OpenArchive.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\PropIDUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\SetProperties.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\SortUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\TempFiles.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\Update.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\UpdateAction.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\UpdateCallback.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\UpdatePair.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\UpdateProduce.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\WorkDir.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\Common\ZipRegistry.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\ExplorerE\ContextMenu.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\ExplorerE\MyMessages.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\ExplorerE\RegistryContextMenu.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\AltStreamsFolder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\FilePlugins.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\ClassDefs.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\EnumFormatEtc.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\FormatUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\FSDrives.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\FSFolder.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\FSFolderCopy.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\HelpUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\LangUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\PropertyName.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\RegistryPlugins.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\StringUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\SysIconUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\TextPairs.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\RegistryUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\CommandLineParser.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\CRC.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\CrcReg.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\DynLimBuf.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\IntToString.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\Lang.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\ListFileUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\MyMap.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\MyString.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\MyXml.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\Random.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\Sha1Reg.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\StringConvert.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\StringToInt.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\UTFConvert.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Common\Wildcard.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\Clipboard.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\CommonDialog.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\DLL.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\ErrorMsg.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileDir.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileFind.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileIO.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileLink.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileName.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\FileSystem.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\MemoryGlobal.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\MemoryLock.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\Menu.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\Net.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\ProcessUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\PropVariant.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\PropVariantConv.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\PropVariantUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\Registry.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\ResourceString.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\SecurityUtils.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\Shell.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\System.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\Windows\TimeUtils.cpp" />
+    <ClCompile Include="..\7ze-src\C\7zCrc.c" />
+    <ClCompile Include="..\7ze-src\C\Alloc.c" />
+    <ClCompile Include="..\7ze-src\C\CpuArch.c" />
+    <ClCompile Include="..\7ze-src\C\Sha1.c" />
+    <ClCompile Include="..\7ze-src\C\Sort.c" />
+    <ClCompile Include="..\7ze-src\C\Threads.c" />
     <ClCompile Include="..\EcoZipFM\EcoZipFM.cpp" />
     <ClCompile Include="..\EcoZipFM\EcoZipFMDlg.cpp" />
     <ClCompile Include="..\EcoZipFM\BCMenu.cpp" />
@@ -463,10 +463,10 @@
     <ClCompile Include="..\EcoZipFM\WICImagingFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\..\7ze-src\Asm\x86\7zCrcOpt.asm">
+    <MASM Include="..\7ze-src\Asm\x86\7zCrcOpt.asm">
       <FileType>Document</FileType>
     </MASM>
-    <MASM Include="..\..\7ze-src\Asm\x86\AesOpt.asm">
+    <MASM Include="..\7ze-src\Asm\x86\AesOpt.asm">
       <FileType>Document</FileType>
     </MASM>
   </ItemGroup>

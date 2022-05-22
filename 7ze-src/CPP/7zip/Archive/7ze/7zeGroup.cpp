@@ -155,7 +155,7 @@ namespace NArchive {
                     strName = token.substr(0, nColon);
                   else
                     strName = token;
-                  strArgName = std::to_string((_Longlong)curGroup.codecs.Size() - 1);
+                  strArgName = std::to_string((long long)curGroup.codecs.Size() - 1);
                   if (stricmp(strName.c_str(), k_DELTA_Name) == 0 && nColon < 0)
                     strArgValue = strName + ":1";
                   else
