@@ -1192,6 +1192,7 @@ void CCompressDialog::SetEncryptionMethod()
   if (ai.Name.IsEqualTo_Ascii_NoCase("7z") || ai.Name.IsEqualTo_Ascii_NoCase("7ze"))
   {
     m_cmbEncryptionMethod.AddString(TEXT("AES-256"));
+    m_cmbEncryptionMethod.AddString(TEXT("Blowfish"));
     m_cmbEncryptionMethod.SetCurSel(0);
   }
   else if (ai.Name.IsEqualTo_Ascii_NoCase("zip"))
