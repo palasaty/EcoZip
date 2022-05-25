@@ -502,10 +502,22 @@ bool CCompressDialog::IsShowPasswordChecked() const
   return (IsDlgButtonChecked(IDX_PASSWORD_SHOW) == BST_CHECKED);
 }
 
+CString randomPassword() {
+    const char alphanum[] = "0123456789!@#$%^&*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int string_length = sizeof(alphanum) - 1;
+
+    CString s;
+    srand(time(0));
+    for (int i = 0; i < 10; i++)
+        s.AppendChar(alphanum[rand() % string_length]);
+
+    return s;
+}
+
 
 void CCompressDialog::UpdatePasswordControl()
 {
-  bool showPassword = IsShowPasswordChecked();
+    bool showPassword = true;// IsShowPasswordChecked();
   TCHAR c = showPassword ? (TCHAR)0: TEXT('*');
   m_edtPassword1.SetPasswordChar(c);
   m_edtPassword2.SetPasswordChar(c);
@@ -514,6 +526,7 @@ void CCompressDialog::UpdatePasswordControl()
 
   ShowItem_Bool(IDT_PASSWORD_REENTER, !showPassword);
   m_edtPassword2.ShowWindow(showPassword ? SW_HIDE : SW_SHOW);
+  m_edtPassword1.SetWindowTextW(randomPassword());
 }
 
 
