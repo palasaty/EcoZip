@@ -1228,7 +1228,7 @@ UString CCompressDialog::GetEncryptionMethodSpec()
 {
   if (m_cmbEncryptionMethod.GetCount() <= 1)
     return UString();
-  if (m_cmbEncryptionMethod.GetCurSel() <= 0)
+  if (m_cmbEncryptionMethod.GetCurSel() <= 1)
     return UString();
   UString result;
   CString str;

@@ -402,6 +402,7 @@
     <ClCompile Include="..\..\7ze-src\C\XzDec.c" />
     <ClCompile Include="..\..\7ze-src\C\XzEnc.c" />
     <ClCompile Include="..\..\7ze-src\C\XzIn.c" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowfishRegister.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="..\..\7ze-src\Asm\x86\7zCrcOpt.asm">

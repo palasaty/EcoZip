@@ -120,6 +120,7 @@ const UInt32 k_ARMT  = 0x3030701;
 const UInt32 k_SPARC = 0x3030805;
 
 const UInt32 k_AES   = 0x6F10701;
+const UInt32 k_BlowFish = 0x6F10751;
 
 
 static inline bool IsFilterMethod(UInt64 m)
