@@ -499,6 +499,7 @@
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\HmacSha256.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\MyAes.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\MyAesReg.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\MyBlow.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\Pbkdf2HmacSha1.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\RandGen.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\Rar5Aes.cpp" />

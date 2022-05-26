@@ -1,7 +1,7 @@
 // 7zAes.h
 
-#ifndef __CRYPTO_7Z_AES_H
-#define __CRYPTO_7Z_AES_H
+#ifndef __CRYPTO_7Z_BLOW_H
+#define __CRYPTO_7Z_BLOW_H
 
 #include "../../Common/MyBuffer.h"
 #include "../../Common/MyCom.h"
@@ -55,8 +55,8 @@ class CBase
   CKeyInfoCache _cachedKeys;
 protected:
   CKeyInfo _key;
-  Byte _iv[kIvSizeMax];
-  unsigned _ivSize;
+  //Byte _iv[kIvSizeMax];
+  //unsigned _ivSize;
   
   void PrepareKey();
   CBase();
@@ -69,7 +69,7 @@ class CBaseCoder:
   public CBase
 {
 protected:
-  CMyComPtr<ICompressFilter> _aesFilter;
+  CMyComPtr<ICompressFilter> _blowFilter;
 
 public:
   INTERFACE_ICompressFilter(;)

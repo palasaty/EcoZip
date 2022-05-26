@@ -13,7 +13,7 @@
 #include "../Common/StreamUtils.h"
 
 #include "7zBlowFish.h"
-#include "MyAes.h"
+#include "MyBlow.h"
 
 #ifndef EXTRACT_ONLY
 #include "RandGen.h"
@@ -24,7 +24,7 @@ namespace N7zBl {
 
 static const unsigned k_NumCyclesPower_Supported_MAX = 24;
 
-bool CKeyInfo::IsEqualTo(const CKeyInfo &a) const
+bool CKeyInfo::IsEqualTo(const CKeyInfo& a) const
 {
   if (SaltSize != a.SaltSize || NumCyclesPower != a.NumCyclesPower)
     return false;
@@ -125,11 +125,11 @@ static CKeyInfoCache g_GlobalKeyCache(32);
 #endif
 
 CBase::CBase():
-  _cachedKeys(16),
-  _ivSize(0)
+  _cachedKeys(16)
+  //_ivSize(0)
 {
-  for (unsigned i = 0; i < sizeof(_iv); i++)
-    _iv[i] = 0;
+  //for (unsigned i = 0; i < sizeof(_iv); i++)
+    //_iv[i] = 0;
 }
 
 void CBase::PrepareKey()
@@ -162,31 +162,31 @@ STDMETHODIMP CEncoder::ResetSalt()
 
 STDMETHODIMP CEncoder::ResetInitVector()
 {
-  for (unsigned i = 0; i < sizeof(_iv); i++)
+  /*for (unsigned i = 0; i < sizeof(_iv); i++)
     _iv[i] = 0;
   _ivSize = 8;
-  g_RandomGenerator.Generate(_iv, _ivSize);
+  g_RandomGenerator.Generate(_iv, _ivSize);*/
   return S_OK;
 }
 
 STDMETHODIMP CEncoder::WriteCoderProperties(ISequentialOutStream *outStream)
 {
-  Byte props[2 + sizeof(_key.Salt) + sizeof(_iv)];
+  Byte props[2 + sizeof(_key.Salt)/* + sizeof(_iv)*/];
   unsigned propsSize = 1;
 
   props[0] = (Byte)(_key.NumCyclesPower
-      | (_key.SaltSize == 0 ? 0 : (1 << 7))
-      | (_ivSize       == 0 ? 0 : (1 << 6)));
+      | (_key.SaltSize == 0 ? 0 : (1 << 7)));
+      //| (_ivSize       == 0 ? 0 : (1 << 6)));
 
-  if (_key.SaltSize != 0 || _ivSize != 0)
+  if (_key.SaltSize != 0 /*|| _ivSize != 0*/)
   {
-    props[1] = (Byte)(
-        ((_key.SaltSize == 0 ? 0 : _key.SaltSize - 1) << 4)
-        | (_ivSize      == 0 ? 0 : _ivSize - 1));
+      props[1] = (Byte)(
+          ((_key.SaltSize == 0 ? 0 : _key.SaltSize - 1) << 4));
+        //| (_ivSize      == 0 ? 0 : _ivSize - 1));
     memcpy(props + 2, _key.Salt, _key.SaltSize);
     propsSize = 2 + _key.SaltSize;
-    memcpy(props + propsSize, _iv, _ivSize);
-    propsSize += _ivSize;
+    //memcpy(props + propsSize, _iv, _ivSize);
+    //propsSize += _ivSize;
   }
 
   return WriteStream(outStream, props, propsSize);
@@ -197,24 +197,24 @@ CEncoder::CEncoder()
   // _key.SaltSize = 4; g_RandomGenerator.Generate(_key.Salt, _key.SaltSize);
   // _key.NumCyclesPower = 0x3F;
   _key.NumCyclesPower = 19;
-  _aesFilter = new CAesCbcEncoder(kKeySize);
+  _blowFilter = new CBlowCbcEncoder(kKeySize);
 }
 
 #endif
 
 CDecoder::CDecoder()
 {
-  _aesFilter = new CAesCbcDecoder(kKeySize);
+  _blowFilter = new CBlowCbcDecoder(kKeySize);
 }
 
 STDMETHODIMP CDecoder::SetDecoderProperties2(const Byte *data, UInt32 size)
 {
   _key.ClearProps();
  
-  _ivSize = 0;
+  //_ivSize = 0;
   unsigned i;
-  for (i = 0; i < sizeof(_iv); i++)
-    _iv[i] = 0;
+  /*for (i = 0; i < sizeof(_iv); i++)
+    _iv[i] = 0;*/
   
   if (size == 0)
     return S_OK;
@@ -239,8 +239,8 @@ STDMETHODIMP CDecoder::SetDecoderProperties2(const Byte *data, UInt32 size)
   data += 2;
   for (i = 0; i < saltSize; i++)
     _key.Salt[i] = *data++;
-  for (i = 0; i < ivSize; i++)
-    _iv[i] = *data++;
+  /*for (i = 0; i < ivSize; i++)
+    _iv[i] = *data++;*/
   return (_key.NumCyclesPower <= k_NumCyclesPower_Supported_MAX
       || _key.NumCyclesPower == 0x3F) ? S_OK : E_NOTIMPL;
 }
@@ -262,19 +262,19 @@ STDMETHODIMP CBaseCoder::Init()
   
   PrepareKey();
   CMyComPtr<ICryptoProperties> cp;
-  RINOK(_aesFilter.QueryInterface(IID_ICryptoProperties, &cp));
+  RINOK(_blowFilter.QueryInterface(IID_ICryptoProperties, &cp));
   if (!cp)
     return E_FAIL;
   RINOK(cp->SetKey(_key.Key, kKeySize));
-  RINOK(cp->SetInitVector(_iv, sizeof(_iv)));
-  return _aesFilter->Init();
+  //RINOK(cp->SetInitVector(_iv, sizeof(_iv)));
+  return _blowFilter->Init();
   
   COM_TRY_END
 }
 
 STDMETHODIMP_(UInt32) CBaseCoder::Filter(Byte *data, UInt32 size)
 {
-  return _aesFilter->Filter(data, size);
+  return _blowFilter->Filter(data, size);
 }
 
 }}

@@ -1619,6 +1619,9 @@
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowFish.cpp">
       <Filter>Source Files\CRYPTO_OBJS</Filter>
     </ClCompile>
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\MyBlow.cpp">
+      <Filter>Source Files\CRYPTO_OBJS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="..\7ze-src\Asm\x86\7zCrcOpt.asm">
