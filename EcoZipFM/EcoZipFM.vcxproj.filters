@@ -1613,6 +1613,12 @@
     <ClCompile Include="..\7ze-src\CPP\7zip\UI\FileManager\TextPairs.cpp">
       <Filter>Source Files\FME_OBJS\LEGACY</Filter>
     </ClCompile>
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowfishRegister.cpp">
+      <Filter>Source Files\CRYPTO_OBJS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowFish.cpp">
+      <Filter>Source Files\CRYPTO_OBJS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="..\7ze-src\Asm\x86\7zCrcOpt.asm">

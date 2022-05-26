@@ -493,6 +493,8 @@
     <ClCompile Include="..\7ze-src\CPP\7zip\Compress\packjpg\packmp3.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zAes.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zAesRegister.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowFish.cpp" />
+    <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\7zBlowfishRegister.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\HmacSha1.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\HmacSha256.cpp" />
     <ClCompile Include="..\7ze-src\CPP\7zip\Crypto\MyAes.cpp" />

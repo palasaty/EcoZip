@@ -625,6 +625,10 @@ HRESULT CEncoder::EncoderConstr()
       method.Id = k_AES;
       _options.Methods.Add(method);
 
+      /*method.NumStreams = 1;
+      method.Id = k_BlowFish;
+      _options.Methods.Add(method);*/
+
       NCoderMixer2::CCoderStreamsInfo cod;
       cod.NumStreams = 1;
       _bindInfo.Coders.Add(cod);

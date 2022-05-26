@@ -11,7 +11,7 @@
 #include "../IPassword.h"
 
 namespace NCrypto {
-namespace N7z {
+namespace N7zBl {
 
 const unsigned kKeySize = 32;
 const unsigned kSaltSizeMax = 16;
